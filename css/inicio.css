@@ -1,0 +1,199 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: white;
+    font-size: 1.6rem;
+    font-family: 'Dancing Script', cursive;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(238, 92, 141);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header_logo {
+    margin: 3rem 0;
+}
+
+/* Navegación */
+.navegacion {
+    background-color: rgb(250, 38, 109);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width: 300px) {
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.navegacion_enlace {
+    color: white;
+    font-size: 3rem;
+}
+.navegacion_enlace:hover {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(255, 170, 239);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer-texto {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.follow-texto {
+    text-align: left;
+    font-size: 1.5rem;
+}
+.social-icons {
+    text-align: center;
+}
+
+/* Grid de elementos */
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 10px;
+    justify-items: center; /* Centra los elementos horizontalmente */
+}
+
+
+.category-container img {
+    max-width: 100%;
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.item {
+    background-color: #eaeaea;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos específicos para la sección de productos */
+.Producto {
+    background-color: rgb(243, 140, 196);
+    padding: 1rem;
+}
+.producto_imagen {
+    width: 100%;
+    max-width: 500;
+}
+.producto_nombre {
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.producto_precio {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px auto; /* Añadir margen superior e inferior */
+    max-width: 80%; /* Limitar el ancho del slider */
+    border: 2px solid #ccc; /* Opcional: añadir un borde para visualización */
+    border-radius: 10px; /* Opcional: redondear los bordes */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Se asegura que las imágenes ocupen toda la pantalla */
+}
+
+.slide img {
+    width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%; /* Opcional: hacer los botones redondos */
+    z-index: 10; /* Asegurarse de que los botones estén por encima de otros elementos */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Ajuste adicional para contenido principal */
+.contenedor {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo opcional para visualización */
+    border-radius: 10px; /* Opcional: redondear los bordes */
+}
+@media (max-width: 768px) {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .category img {
+        width: 100px; /* Tamaño de imagen ajustado */
+        margin-bottom: 10px; /* Margen inferior reducido */
+    }
+    .items {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en lugar de tres */
+    }
+}

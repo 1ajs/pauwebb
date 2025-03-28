@@ -1,0 +1,105 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: white;
+    font-size: 1.6rem;
+    font-family: "Dancing Script", cursive; /* Cambia la fuente */
+        line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1{
+    font-size: 4rem;
+    text-align: center;
+    color: black;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header_logo {
+    margin: 3rem 0;
+}
+
+.navegacion {
+    background-color: black;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width: 768px) {
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.navegacion_enlace {
+    color: white;
+    font-size: 3rem;
+}
+.navegacion_enlace:hover {
+    color: white;
+}
+
+.footer {
+    background-color: black;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer-texto {
+    text-align: center;
+    font-size: 1.5rem; 
+}
+.follow-texto {
+    text-align: left;
+    font-size: 1.5rem;   
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.Producto {
+    background-color: black;
+    padding: 1rem;
+
+}
+.producto_imagen {
+    width: 100%;
+}
+.producto_nombre {
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.producto_precio {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
